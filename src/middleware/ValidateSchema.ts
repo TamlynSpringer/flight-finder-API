@@ -1,7 +1,6 @@
 import Joi, { ObjectSchema} from 'joi';
 import { NextFunction, Request, Response } from 'express';
 import { IFlight } from '../models/Flight';
-import { IRoute } from '../models/Route';
 
 export const ValidateSchema = (schema: ObjectSchema) => {
   return async (req: Request, res: Response, next: NextFunction) => {
@@ -18,40 +17,36 @@ export const ValidateSchema = (schema: ObjectSchema) => {
 export const Schemas = {
   flight: {
     create: Joi.object<IFlight>({
-      flight_id: Joi.string().required(),
-      departureAt: Joi.string().required(),
-      arrivalAt: Joi.string().required(),
-      availableSeats: Joi.number().required(),
-      prices: {
-        currency: Joi.string().required(),
-        adult: Joi.number().required(),
-        child: Joi.number().required(),
-      }
+      route_id: Joi.string().required(),
+      departureDestination: Joi.string().required(),
+      arrivalDestination: Joi.string().required(),
+      flights: [{
+        flight_id: Joi.string().required(),
+        departureAt: Joi.string().required(),
+        arrivalAt: Joi.string().required(),
+        availableSeats: Joi.number().required(),
+        prices: {
+          currency: Joi.string().required(),
+          adult: Joi.number().required(),
+          child: Joi.number().required(),
+        }
+      }]
     }),
     update: Joi.object<IFlight>({
-      flight_id: Joi.string().required(),
-      departureAt: Joi.string().required(),
-      arrivalAt: Joi.string().required(),
-      availableSeats: Joi.number().required(),
-      prices: {
-        currency: Joi.string().required(),
-        adult: Joi.number().required(),
-        child: Joi.number().required(),
+      route_id: Joi.string().required(),
+      departureDestination: Joi.string().required(),
+      arrivalDestination: Joi.string().required(),
+      flights: {
+        flight_id: Joi.string().required(),
+        departureAt: Joi.string().required(),
+        arrivalAt: Joi.string().required(),
+        availableSeats: Joi.number().required(),
+        prices: {
+          currency: Joi.string().required(),
+          adult: Joi.number().required(),
+          child: Joi.number().required(),
+        }
       }
-    })
-  },
-  route: {
-    create: Joi.object<IRoute>({
-      route_id: Joi.string().required(),
-      departureDestination: Joi.string().required(),
-      arrivalDestination: Joi.string().required(),
-      flights: Joi.object().required(),
-    }),
-    update: Joi.object<IRoute>({
-      route_id: Joi.string().required(),
-      departureDestination: Joi.string().required(),
-      arrivalDestination: Joi.string().required(),
-      flights: Joi.object().required(),
     })
   }
 };
