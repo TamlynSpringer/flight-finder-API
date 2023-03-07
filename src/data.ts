@@ -1,12 +1,12 @@
 const data = { 
     flight: [
       {
-        route_id: "8efc39dd",
+        routeCode: "8efc39dd",
         departureDestination: "Oslo",
         arrivalDestination: "Stockholm",
         flights: [
             {
-              flight_id: "87211f8b",
+              flightCode: "87211f8b",
               departureAt: "2023-03-29T11:00:00.000Z",
               arrivalAt: "2023-03-29T14:00:00.000Z",
               availableSeats: 3,
@@ -17,7 +17,7 @@ const data = {
               }
             },
             {
-                flight_id: "a444cd64",
+                flightCode: "a444cd64",
                 departureAt: "2023-03-30T11:00:00.000Z",
                 arrivalAt: "2023-03-30T14:00:00.000Z",
                 availableSeats: 82,
@@ -28,7 +28,7 @@ const data = {
                 }
             },
             {
-                flight_id: "6b1267e6",
+                flightCode: "6b1267e6",
                 departureAt: "2023-03-30T17:00:00.000Z",
                 arrivalAt: "2023-03-30T20:00:00.000Z",
                 availableSeats: 45,
@@ -39,7 +39,7 @@ const data = {
                 }
             },
             {
-                flight_id: "0d67fe34",
+                flightCode: "0d67fe34",
                 departureAt: "2023-03-30T21:00:00.000Z",
                 arrivalAt: "2023-03-31T00:00:00.000Z",
                 availableSeats: 81,
@@ -50,7 +50,7 @@ const data = {
                 }
             },
             {
-                flight_id: "b0180510",
+                flightCode: "b0180510",
                 departureAt: "2023-03-31T03:00:00.000Z",
                 arrivalAt: "2023-03-31T06:00:00.000Z",
                 availableSeats: 80,
@@ -61,7 +61,7 @@ const data = {
                 }
             },
             {
-                flight_id: "2742d225",
+                flightCode: "2742d225",
                 departureAt: "2023-04-01T03:00:00.000Z",
                 arrivalAt: "2023-04-01T06:00:00.000Z",
                 availableSeats: 22,
@@ -72,7 +72,7 @@ const data = {
                 }
             },
             {
-                flight_id: "a77b9d8b",
+                flightCode: "a77b9d8b",
                 departureAt: "2023-04-01T07:00:00.000Z",
                 arrivalAt: "2023-04-01T10:00:00.000Z",
                 availableSeats: 86,
@@ -83,7 +83,7 @@ const data = {
                 }
             },
             {
-                flight_id: "6955f2b8",
+                flightCode: "6955f2b8",
                 departureAt: "2023-04-02T07:00:00.000Z",
                 arrivalAt: "2023-04-02T10:00:00.000Z",
                 availableSeats: 52,
@@ -94,7 +94,7 @@ const data = {
                 }
             },
             {
-                flight_id: "600b58c4",
+                flightCode: "600b58c4",
                 departureAt: "2023-04-02T13:00:00.000Z",
                 arrivalAt: "2023-04-02T16:00:00.000Z",
                 availableSeats: 27,
@@ -105,7 +105,7 @@ const data = {
                 }
             },
             {
-                flight_id: "e3bd0ae5",
+                flightCode: "e3bd0ae5",
                 departureAt: "2023-04-02T17:00:00.000Z",
                 arrivalAt: "2023-04-02T20:00:00.000Z",
                 availableSeats: 94,
@@ -116,7 +116,7 @@ const data = {
                 }
             },
             {
-                flight_id: "ffe0432c",
+                flightCode: "ffe0432c",
                 departureAt: "2023-04-02T23:00:00.000Z",
                 arrivalAt: "2023-04-03T02:00:00.000Z",
                 availableSeats: 99,
@@ -127,7 +127,7 @@ const data = {
                 }
             },
             {
-                flight_id: "e64408d4",
+                flightCode: "e64408d4",
                 departureAt: "2023-04-03T23:00:00.000Z",
                 arrivalAt: "2023-04-04T02:00:00.000Z",
                 availableSeats: 55,
@@ -138,7 +138,7 @@ const data = {
                 }
             },
             {
-                flight_id: "ab4b92cf",
+                flightCode: "ab4b92cf",
                 departureAt: "2023-04-04T03:00:00.000Z",
                 arrivalAt: "2023-04-04T06:00:00.000Z",
                 availableSeats: 77,
@@ -149,7 +149,7 @@ const data = {
                 }
             },
             {
-                flight_id: "02eb7d88",
+                flightCode: "02eb7d88",
                 departureAt: "2023-04-05T03:00:00.000Z",
                 arrivalAt: "2023-04-05T06:00:00.000Z",
                 availableSeats: 66,
@@ -160,7 +160,7 @@ const data = {
                 }
             },
             {
-                flight_id: "5f7a09b5",
+                flightCode: "5f7a09b5",
                 departureAt: "2023-04-05T09:00:00.000Z",
                 arrivalAt: "2023-04-05T12:00:00.000Z",
                 availableSeats: 51,
@@ -171,7 +171,7 @@ const data = {
                 }
             },
             {
-                flight_id: "273f69a5",
+                flightCode: "273f69a5",
                 departureAt: "2023-04-05T13:00:00.000Z",
                 arrivalAt: "2023-04-05T16:00:00.000Z",
                 availableSeats: 17,
@@ -182,7 +182,7 @@ const data = {
                 }
             },
             {
-                flight_id: "84d6f482",
+                flightCode: "84d6f482",
                 departureAt: "2023-04-05T19:00:00.000Z",
                 arrivalAt: "2023-04-05T22:00:00.000Z",
                 availableSeats: 42,
@@ -193,7 +193,7 @@ const data = {
                 }
             },
             {
-                flight_id: "468b79da",
+                flightCode: "468b79da",
                 departureAt: "2023-04-06T19:00:00.000Z",
                 arrivalAt: "2023-04-06T22:00:00.000Z",
                 availableSeats: 88,
@@ -204,7 +204,7 @@ const data = {
                 }
             },
             {
-                flight_id: "dc623bd1",
+                flightCode: "dc623bd1",
                 departureAt: "2023-04-06T23:00:00.000Z",
                 arrivalAt: "2023-04-07T02:00:00.000Z",
                 availableSeats: 7,
@@ -215,7 +215,7 @@ const data = {
                 }
             },
             {
-                flight_id: "e1c7bbb3",
+                flightCode: "e1c7bbb3",
                 departureAt: "2023-04-07T23:00:00.000Z",
                 arrivalAt: "2023-04-08T02:00:00.000Z",
                 availableSeats: 46,
@@ -228,12 +228,12 @@ const data = {
         ]
     },
     {
-        route_id: "42be9e9e",
+        routeCode: "42be9e9e",
         departureDestination: "Amsterdam",
         arrivalDestination: "Stockholm",
         flights: [
             {
-                flight_id: "2c71577c",
+                flightCode: "2c71577c",
                 departureAt: "2023-03-29T11:00:00.000Z",
                 arrivalAt: "2023-03-29T14:00:00.000Z",
                 availableSeats: 68,
@@ -244,7 +244,7 @@ const data = {
                 }
             },
             {
-                flight_id: "e94047f9",
+                flightCode: "e94047f9",
                 departureAt: "2023-03-30T11:00:00.000Z",
                 arrivalAt: "2023-03-30T14:00:00.000Z",
                 availableSeats: 5,
@@ -255,7 +255,7 @@ const data = {
                 }
             },
             {
-                flight_id: "b369be32",
+                flightCode: "b369be32",
                 departureAt: "2023-03-30T17:00:00.000Z",
                 arrivalAt: "2023-03-30T20:00:00.000Z",
                 availableSeats: 26,
@@ -266,7 +266,7 @@ const data = {
                 }
             },
             {
-                flight_id: "5ede1871",
+                flightCode: "5ede1871",
                 departureAt: "2023-03-30T21:00:00.000Z",
                 arrivalAt: "2023-03-31T00:00:00.000Z",
                 availableSeats: 45,
@@ -277,7 +277,7 @@ const data = {
                 }
             },
             {
-                flight_id: "a318bd79",
+                flightCode: "a318bd79",
                 departureAt: "2023-03-31T03:00:00.000Z",
                 arrivalAt: "2023-03-31T06:00:00.000Z",
                 availableSeats: 91,
@@ -288,7 +288,7 @@ const data = {
                 }
             },
             {
-                flight_id: "25251a99",
+                flightCode: "25251a99",
                 departureAt: "2023-04-01T03:00:00.000Z",
                 arrivalAt: "2023-04-01T06:00:00.000Z",
                 availableSeats: 4,
@@ -299,7 +299,7 @@ const data = {
                 }
             },
             {
-                flight_id: "60711b2e",
+                flightCode: "60711b2e",
                 departureAt: "2023-04-01T07:00:00.000Z",
                 arrivalAt: "2023-04-01T10:00:00.000Z",
                 availableSeats: 4,
@@ -310,7 +310,7 @@ const data = {
                 }
             },
             {
-                flight_id: "4a5d43f4",
+                flightCode: "4a5d43f4",
                 departureAt: "2023-04-02T07:00:00.000Z",
                 arrivalAt: "2023-04-02T10:00:00.000Z",
                 availableSeats: 51,
@@ -321,7 +321,7 @@ const data = {
                 }
             },
             {
-                flight_id: "3f184e9e",
+                flightCode: "3f184e9e",
                 departureAt: "2023-04-02T13:00:00.000Z",
                 arrivalAt: "2023-04-02T16:00:00.000Z",
                 availableSeats: 98,
@@ -332,7 +332,7 @@ const data = {
                 }
             },
             {
-                flight_id: "17cc002a",
+                flightCode: "17cc002a",
                 departureAt: "2023-04-02T17:00:00.000Z",
                 arrivalAt: "2023-04-02T20:00:00.000Z",
                 availableSeats: 34,
@@ -343,7 +343,7 @@ const data = {
                 }
             },
             {
-                flight_id: "a0da7f57",
+                flightCode: "a0da7f57",
                 departureAt: "2023-04-02T23:00:00.000Z",
                 arrivalAt: "2023-04-03T02:00:00.000Z",
                 availableSeats: 27,
@@ -354,7 +354,7 @@ const data = {
                 }
             },
             {
-                flight_id: "d6c33fef",
+                flightCode: "d6c33fef",
                 departureAt: "2023-04-03T23:00:00.000Z",
                 arrivalAt: "2023-04-04T02:00:00.000Z",
                 availableSeats: 33,
@@ -365,7 +365,7 @@ const data = {
                 }
             },
             {
-                flight_id: "495d3f42",
+                flightCode: "495d3f42",
                 departureAt: "2023-04-04T03:00:00.000Z",
                 arrivalAt: "2023-04-04T06:00:00.000Z",
                 availableSeats: 92,
@@ -376,7 +376,7 @@ const data = {
                 }
             },
             {
-                flight_id: "32ddad7c",
+                flightCode: "32ddad7c",
                 departureAt: "2023-04-05T03:00:00.000Z",
                 arrivalAt: "2023-04-05T06:00:00.000Z",
                 availableSeats: 83,
@@ -387,7 +387,7 @@ const data = {
                 }
             },
             {
-                flight_id: "bd7fab04",
+                flightCode: "bd7fab04",
                 departureAt: "2023-04-05T09:00:00.000Z",
                 arrivalAt: "2023-04-05T12:00:00.000Z",
                 availableSeats: 10,
@@ -398,7 +398,7 @@ const data = {
                 }
             },
             {
-                flight_id: "4518964f",
+                flightCode: "4518964f",
                 departureAt: "2023-04-05T13:00:00.000Z",
                 arrivalAt: "2023-04-05T16:00:00.000Z",
                 availableSeats: 76,
@@ -409,7 +409,7 @@ const data = {
                 }
             },
             {
-                flight_id: "0ad24ad7",
+                flightCode: "0ad24ad7",
                 departureAt: "2023-04-05T19:00:00.000Z",
                 arrivalAt: "2023-04-05T22:00:00.000Z",
                 availableSeats: 71,
@@ -420,7 +420,7 @@ const data = {
                 }
             },
             {
-                flight_id: "cfab559f",
+                flightCode: "cfab559f",
                 departureAt: "2023-04-06T19:00:00.000Z",
                 arrivalAt: "2023-04-06T22:00:00.000Z",
                 availableSeats: 95,
@@ -431,7 +431,7 @@ const data = {
                 }
             },
             {
-                flight_id: "d026ffd6",
+                flightCode: "d026ffd6",
                 departureAt: "2023-04-06T23:00:00.000Z",
                 arrivalAt: "2023-04-07T02:00:00.000Z",
                 availableSeats: 2,
@@ -442,7 +442,7 @@ const data = {
                 }
             },
             {
-                flight_id: "eea593ef",
+                flightCode: "eea593ef",
                 departureAt: "2023-04-07T23:00:00.000Z",
                 arrivalAt: "2023-04-08T02:00:00.000Z",
                 availableSeats: 8,
@@ -455,12 +455,12 @@ const data = {
         ]
     },
     {
-        route_id: "a35d65d2",
+        routeCode: "a35d65d2",
         departureDestination: "Stockholm",
         arrivalDestination: "Oslo",
         flights: [
             {
-                flight_id: "78720a21",
+                flightCode: "78720a21",
                 departureAt: "2023-03-29T11:00:00.000Z",
                 arrivalAt: "2023-03-29T14:00:00.000Z",
                 availableSeats: 59,
@@ -471,7 +471,7 @@ const data = {
                 }
             },
             {
-                flight_id: "ee1d3931",
+                flightCode: "ee1d3931",
                 departureAt: "2023-03-30T11:00:00.000Z",
                 arrivalAt: "2023-03-30T14:00:00.000Z",
                 availableSeats: 52,
@@ -482,7 +482,7 @@ const data = {
                 }
             },
             {
-                flight_id: "23837e04",
+                flightCode: "23837e04",
                 departureAt: "2023-03-30T17:00:00.000Z",
                 arrivalAt: "2023-03-30T20:00:00.000Z",
                 availableSeats: 60,
@@ -493,7 +493,7 @@ const data = {
                 }
             },
             {
-                flight_id: "01f8f87d",
+                flightCode: "01f8f87d",
                 departureAt: "2023-03-30T21:00:00.000Z",
                 arrivalAt: "2023-03-31T00:00:00.000Z",
                 availableSeats: 99,
@@ -504,7 +504,7 @@ const data = {
                 }
             },
             {
-                flight_id: "c8981b87",
+                flightCode: "c8981b87",
                 departureAt: "2023-03-31T03:00:00.000Z",
                 arrivalAt: "2023-03-31T06:00:00.000Z",
                 availableSeats: 43,
@@ -515,7 +515,7 @@ const data = {
                 }
             },
             {
-                flight_id: "eaf437e1",
+                flightCode: "eaf437e1",
                 departureAt: "2023-04-01T03:00:00.000Z",
                 arrivalAt: "2023-04-01T06:00:00.000Z",
                 availableSeats: 90,
@@ -526,7 +526,7 @@ const data = {
                 }
             },
             {
-                flight_id: "acabf8dd",
+                flightCode: "acabf8dd",
                 departureAt: "2023-04-01T07:00:00.000Z",
                 arrivalAt: "2023-04-01T10:00:00.000Z",
                 availableSeats: 61,
@@ -537,7 +537,7 @@ const data = {
                 }
             },
             {
-                flight_id: "9b91fa79",
+                flightCode: "9b91fa79",
                 departureAt: "2023-04-02T07:00:00.000Z",
                 arrivalAt: "2023-04-02T10:00:00.000Z",
                 availableSeats: 41,
@@ -548,7 +548,7 @@ const data = {
                 }
             },
             {
-                flight_id: "d8d8209b",
+                flightCode: "d8d8209b",
                 departureAt: "2023-04-02T13:00:00.000Z",
                 arrivalAt: "2023-04-02T16:00:00.000Z",
                 availableSeats: 66,
@@ -559,7 +559,7 @@ const data = {
                 }
             },
             {
-                flight_id: "f8bed64b",
+                flightCode: "f8bed64b",
                 departureAt: "2023-04-02T17:00:00.000Z",
                 arrivalAt: "2023-04-02T20:00:00.000Z",
                 availableSeats: 38,
@@ -570,7 +570,7 @@ const data = {
                 }
             },
             {
-                flight_id: "e3cc4e66",
+                flightCode: "e3cc4e66",
                 departureAt: "2023-04-02T23:00:00.000Z",
                 arrivalAt: "2023-04-03T02:00:00.000Z",
                 availableSeats: 42,
@@ -581,7 +581,7 @@ const data = {
                 }
             },
             {
-                flight_id: "f97fc9ec",
+                flightCode: "f97fc9ec",
                 departureAt: "2023-04-03T23:00:00.000Z",
                 arrivalAt: "2023-04-04T02:00:00.000Z",
                 availableSeats: 20,
@@ -592,7 +592,7 @@ const data = {
                 }
             },
             {
-                flight_id: "da44cedb",
+                flightCode: "da44cedb",
                 departureAt: "2023-04-04T03:00:00.000Z",
                 arrivalAt: "2023-04-04T06:00:00.000Z",
                 availableSeats: 57,
@@ -603,7 +603,7 @@ const data = {
                 }
             },
             {
-                flight_id: "565eebb4",
+                flightCode: "565eebb4",
                 departureAt: "2023-04-05T03:00:00.000Z",
                 arrivalAt: "2023-04-05T06:00:00.000Z",
                 availableSeats: 12,
@@ -614,7 +614,7 @@ const data = {
                 }
             },
             {
-                flight_id: "429ce43c",
+                flightCode: "429ce43c",
                 departureAt: "2023-04-05T09:00:00.000Z",
                 arrivalAt: "2023-04-05T12:00:00.000Z",
                 availableSeats: 6,
@@ -625,7 +625,7 @@ const data = {
                 }
             },
             {
-                flight_id: "477c93d3",
+                flightCode: "477c93d3",
                 departureAt: "2023-04-05T13:00:00.000Z",
                 arrivalAt: "2023-04-05T16:00:00.000Z",
                 availableSeats: 83,
@@ -636,7 +636,7 @@ const data = {
                 }
             },
             {
-                flight_id: "86c3267d",
+                flightCode: "86c3267d",
                 departureAt: "2023-04-05T19:00:00.000Z",
                 arrivalAt: "2023-04-05T22:00:00.000Z",
                 availableSeats: 64,
@@ -647,7 +647,7 @@ const data = {
                 }
             },
             {
-                flight_id: "ce8483c9",
+                flightCode: "ce8483c9",
                 departureAt: "2023-04-06T19:00:00.000Z",
                 arrivalAt: "2023-04-06T22:00:00.000Z",
                 availableSeats: 80,
@@ -658,7 +658,7 @@ const data = {
                 }
             },
             {
-                flight_id: "357c4279",
+                flightCode: "357c4279",
                 departureAt: "2023-04-06T23:00:00.000Z",
                 arrivalAt: "2023-04-07T02:00:00.000Z",
                 availableSeats: 37,
@@ -669,7 +669,7 @@ const data = {
                 }
             },
             {
-                flight_id: "e15ee620",
+                flightCode: "e15ee620",
                 departureAt: "2023-04-07T23:00:00.000Z",
                 arrivalAt: "2023-04-08T02:00:00.000Z",
                 availableSeats: 25,
@@ -682,12 +682,12 @@ const data = {
         ]
     },
     {
-        route_id: "52ec1574",
+        routeCode: "52ec1574",
         departureDestination: "Stockholm",
         arrivalDestination: "Amsterdam",
         flights: [
             {
-                flight_id: "44d88508",
+                flightCode: "44d88508",
                 departureAt: "2023-03-29T11:00:00.000Z",
                 arrivalAt: "2023-03-29T14:00:00.000Z",
                 availableSeats: 36,
@@ -698,7 +698,7 @@ const data = {
                 }
             },
             {
-                flight_id: "edec66a0",
+                flightCode: "edec66a0",
                 departureAt: "2023-03-30T11:00:00.000Z",
                 arrivalAt: "2023-03-30T14:00:00.000Z",
                 availableSeats: 41,
@@ -709,7 +709,7 @@ const data = {
                 }
             },
             {
-                flight_id: "0033bf62",
+                flightCode: "0033bf62",
                 departureAt: "2023-03-30T17:00:00.000Z",
                 arrivalAt: "2023-03-30T20:00:00.000Z",
                 availableSeats: 11,
@@ -720,7 +720,7 @@ const data = {
                 }
             },
             {
-                flight_id: "b4e9fecb",
+                flightCode: "b4e9fecb",
                 departureAt: "2023-03-30T21:00:00.000Z",
                 arrivalAt: "2023-03-31T00:00:00.000Z",
                 availableSeats: 69,
@@ -731,7 +731,7 @@ const data = {
                 }
             },
             {
-                flight_id: "8eaa13ae",
+                flightCode: "8eaa13ae",
                 departureAt: "2023-03-31T03:00:00.000Z",
                 arrivalAt: "2023-03-31T06:00:00.000Z",
                 availableSeats: 97,
@@ -742,7 +742,7 @@ const data = {
                 }
             },
             {
-                flight_id: "57522409",
+                flightCode: "57522409",
                 departureAt: "2023-04-01T03:00:00.000Z",
                 arrivalAt: "2023-04-01T06:00:00.000Z",
                 availableSeats: 17,
@@ -753,7 +753,7 @@ const data = {
                 }
             },
             {
-                flight_id: "aeaa1163",
+                flightCode: "aeaa1163",
                 departureAt: "2023-04-01T07:00:00.000Z",
                 arrivalAt: "2023-04-01T10:00:00.000Z",
                 availableSeats: 66,
@@ -764,7 +764,7 @@ const data = {
                 }
             },
             {
-                flight_id: "8bd60b17",
+                flightCode: "8bd60b17",
                 departureAt: "2023-04-02T07:00:00.000Z",
                 arrivalAt: "2023-04-02T10:00:00.000Z",
                 availableSeats: 61,
@@ -775,7 +775,7 @@ const data = {
                 }
             },
             {
-                flight_id: "d992e228",
+                flightCode: "d992e228",
                 departureAt: "2023-04-02T13:00:00.000Z",
                 arrivalAt: "2023-04-02T16:00:00.000Z",
                 availableSeats: 93,
@@ -786,7 +786,7 @@ const data = {
                 }
             },
             {
-                flight_id: "8b34add5",
+                flightCode: "8b34add5",
                 departureAt: "2023-04-02T17:00:00.000Z",
                 arrivalAt: "2023-04-02T20:00:00.000Z",
                 availableSeats: 3,
@@ -797,7 +797,7 @@ const data = {
                 }
             },
             {
-                flight_id: "b046b198",
+                flightCode: "b046b198",
                 departureAt: "2023-04-02T23:00:00.000Z",
                 arrivalAt: "2023-04-03T02:00:00.000Z",
                 availableSeats: 37,
@@ -808,7 +808,7 @@ const data = {
                 }
             },
             {
-                flight_id: "e76ef91e",
+                flightCode: "e76ef91e",
                 departureAt: "2023-04-03T23:00:00.000Z",
                 arrivalAt: "2023-04-04T02:00:00.000Z",
                 availableSeats: 17,
@@ -819,7 +819,7 @@ const data = {
                 }
             },
             {
-                flight_id: "dfc0d1b7",
+                flightCode: "dfc0d1b7",
                 departureAt: "2023-04-04T03:00:00.000Z",
                 arrivalAt: "2023-04-04T06:00:00.000Z",
                 availableSeats: 16,
@@ -830,7 +830,7 @@ const data = {
                 }
             },
             {
-                flight_id: "9a0c9a7d",
+                flightCode: "9a0c9a7d",
                 departureAt: "2023-04-05T03:00:00.000Z",
                 arrivalAt: "2023-04-05T06:00:00.000Z",
                 availableSeats: 46,
@@ -841,7 +841,7 @@ const data = {
                 }
             },
             {
-                flight_id: "cca3c3cf",
+                flightCode: "cca3c3cf",
                 departureAt: "2023-04-05T09:00:00.000Z",
                 arrivalAt: "2023-04-05T12:00:00.000Z",
                 availableSeats: 69,
@@ -852,7 +852,7 @@ const data = {
                 }
             },
             {
-                flight_id: "203aa013",
+                flightCode: "203aa013",
                 departureAt: "2023-04-05T13:00:00.000Z",
                 arrivalAt: "2023-04-05T16:00:00.000Z",
                 availableSeats: 72,
@@ -863,7 +863,7 @@ const data = {
                 }
             },
             {
-                flight_id: "e8d01807",
+                flightCode: "e8d01807",
                 departureAt: "2023-04-05T19:00:00.000Z",
                 arrivalAt: "2023-04-05T22:00:00.000Z",
                 availableSeats: 84,
@@ -874,7 +874,7 @@ const data = {
                 }
             },
             {
-                flight_id: "bf3db75e",
+                flightCode: "bf3db75e",
                 departureAt: "2023-04-06T19:00:00.000Z",
                 arrivalAt: "2023-04-06T22:00:00.000Z",
                 availableSeats: 61,
@@ -885,7 +885,7 @@ const data = {
                 }
             },
             {
-                flight_id: "df6495a7",
+                flightCode: "df6495a7",
                 departureAt: "2023-04-06T23:00:00.000Z",
                 arrivalAt: "2023-04-07T02:00:00.000Z",
                 availableSeats: 26,
@@ -896,7 +896,7 @@ const data = {
                 }
             },
             {
-                flight_id: "3a13dec1",
+                flightCode: "3a13dec1",
                 departureAt: "2023-04-07T23:00:00.000Z",
                 arrivalAt: "2023-04-08T02:00:00.000Z",
                 availableSeats: 40,
@@ -909,12 +909,12 @@ const data = {
         ]
     },
     {
-        route_id: "c76824c1",
+        routeCode: "c76824c1",
         departureDestination: "Amsterdam",
         arrivalDestination: "Oslo",
         flights: [
             {
-                flight_id: "376ecc32",
+                flightCode: "376ecc32",
                 departureAt: "2023-03-29T11:00:00.000Z",
                 arrivalAt: "2023-03-29T14:00:00.000Z",
                 availableSeats: 13,
@@ -925,7 +925,7 @@ const data = {
                 }
             },
             {
-                flight_id: "7ce5110f",
+                flightCode: "7ce5110f",
                 departureAt: "2023-03-30T11:00:00.000Z",
                 arrivalAt: "2023-03-30T14:00:00.000Z",
                 availableSeats: 86,
@@ -936,7 +936,7 @@ const data = {
                 }
             },
             {
-                flight_id: "70466cc2",
+                flightCode: "70466cc2",
                 departureAt: "2023-03-30T17:00:00.000Z",
                 arrivalAt: "2023-03-30T20:00:00.000Z",
                 availableSeats: 15,
@@ -947,7 +947,7 @@ const data = {
                 }
             },
             {
-                flight_id: "737ef3a4",
+                flightCode: "737ef3a4",
                 departureAt: "2023-03-30T21:00:00.000Z",
                 arrivalAt: "2023-03-31T00:00:00.000Z",
                 availableSeats: 40,
@@ -958,7 +958,7 @@ const data = {
                 }
             },
             {
-                flight_id: "d2980068",
+                flightCode: "d2980068",
                 departureAt: "2023-03-31T03:00:00.000Z",
                 arrivalAt: "2023-03-31T06:00:00.000Z",
                 availableSeats: 27,
@@ -969,7 +969,7 @@ const data = {
                 }
             },
             {
-                flight_id: "49910152",
+                flightCode: "49910152",
                 departureAt: "2023-04-01T03:00:00.000Z",
                 arrivalAt: "2023-04-01T06:00:00.000Z",
                 availableSeats: 16,
@@ -980,7 +980,7 @@ const data = {
                 }
             },
             {
-                flight_id: "97bb111b",
+                flightCode: "97bb111b",
                 departureAt: "2023-04-01T07:00:00.000Z",
                 arrivalAt: "2023-04-01T10:00:00.000Z",
                 availableSeats: 82,
@@ -991,7 +991,7 @@ const data = {
                 }
             },
             {
-                flight_id: "23813979",
+                flightCode: "23813979",
                 departureAt: "2023-04-02T07:00:00.000Z",
                 arrivalAt: "2023-04-02T10:00:00.000Z",
                 availableSeats: 14,
@@ -1002,7 +1002,7 @@ const data = {
                 }
             },
             {
-                flight_id: "9327797c",
+                flightCode: "9327797c",
                 departureAt: "2023-04-02T13:00:00.000Z",
                 arrivalAt: "2023-04-02T16:00:00.000Z",
                 availableSeats: 62,
@@ -1013,7 +1013,7 @@ const data = {
                 }
             },
             {
-                flight_id: "f44c177a",
+                flightCode: "f44c177a",
                 departureAt: "2023-04-02T17:00:00.000Z",
                 arrivalAt: "2023-04-02T20:00:00.000Z",
                 availableSeats: 48,
@@ -1024,7 +1024,7 @@ const data = {
                 }
             },
             {
-                flight_id: "529fe331",
+                flightCode: "529fe331",
                 departureAt: "2023-04-02T23:00:00.000Z",
                 arrivalAt: "2023-04-03T02:00:00.000Z",
                 availableSeats: 71,
@@ -1035,7 +1035,7 @@ const data = {
                 }
             },
             {
-                flight_id: "341e5513",
+                flightCode: "341e5513",
                 departureAt: "2023-04-03T23:00:00.000Z",
                 arrivalAt: "2023-04-04T02:00:00.000Z",
                 availableSeats: 92,
@@ -1046,7 +1046,7 @@ const data = {
                 }
             },
             {
-                flight_id: "e80b9947",
+                flightCode: "e80b9947",
                 departureAt: "2023-04-04T03:00:00.000Z",
                 arrivalAt: "2023-04-04T06:00:00.000Z",
                 availableSeats: 90,
@@ -1057,7 +1057,7 @@ const data = {
                 }
             },
             {
-                flight_id: "9877c3b6",
+                flightCode: "9877c3b6",
                 departureAt: "2023-04-05T03:00:00.000Z",
                 arrivalAt: "2023-04-05T06:00:00.000Z",
                 availableSeats: 79,
@@ -1068,7 +1068,7 @@ const data = {
                 }
             },
             {
-                flight_id: "4679bd4d",
+                flightCode: "4679bd4d",
                 departureAt: "2023-04-05T09:00:00.000Z",
                 arrivalAt: "2023-04-05T12:00:00.000Z",
                 availableSeats: 91,
@@ -1079,7 +1079,7 @@ const data = {
                 }
             },
             {
-                flight_id: "271c3a11",
+                flightCode: "271c3a11",
                 departureAt: "2023-04-05T13:00:00.000Z",
                 arrivalAt: "2023-04-05T16:00:00.000Z",
                 availableSeats: 35,
@@ -1090,7 +1090,7 @@ const data = {
                 }
             },
             {
-                flight_id: "a4ce6dff",
+                flightCode: "a4ce6dff",
                 departureAt: "2023-04-05T19:00:00.000Z",
                 arrivalAt: "2023-04-05T22:00:00.000Z",
                 availableSeats: 30,
@@ -1101,7 +1101,7 @@ const data = {
                 }
             },
             {
-                flight_id: "b9e70f64",
+                flightCode: "b9e70f64",
                 departureAt: "2023-04-06T19:00:00.000Z",
                 arrivalAt: "2023-04-06T22:00:00.000Z",
                 availableSeats: 94,
@@ -1112,7 +1112,7 @@ const data = {
                 }
             },
             {
-                flight_id: "f13d99ec",
+                flightCode: "f13d99ec",
                 departureAt: "2023-04-06T23:00:00.000Z",
                 arrivalAt: "2023-04-07T02:00:00.000Z",
                 availableSeats: 11,
@@ -1123,7 +1123,7 @@ const data = {
                 }
             },
             {
-                flight_id: "cbbc7735",
+                flightCode: "cbbc7735",
                 departureAt: "2023-04-07T23:00:00.000Z",
                 arrivalAt: "2023-04-08T02:00:00.000Z",
                 availableSeats: 84,

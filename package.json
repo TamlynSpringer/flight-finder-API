@@ -5,7 +5,8 @@
   "main": "src/server.ts",
   "scripts": {
     "build": "rm -rf build/ && npx tsc",
-    "start": "node build/server.js"
+    "start": "node build/server.ts",
+    "dev": "nodemon src/server.ts"
   },
   "keywords": [],
   "author": "",

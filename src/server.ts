@@ -2,9 +2,8 @@ import express from 'express';
 import http from 'http';
 import mongoose from 'mongoose';
 import { config } from './config/config';
-// import authorRoutes from './routes/Author';
-// import bookRoutes from './routes/Book';
-import seedRouter from './routes/seedRoute'
+import flightRoutes from './routes/Flight';
+ import seedRouter from './routes/Seed';
 
 const router = express();
 
@@ -13,10 +12,14 @@ const router = express();
 mongoose
 .connect(config.mongo.url, { retryWrites: true, w: 'majority' })
 .then(() => {
-  console.log('Connected to Mongo')
+  console.log('Connected to MongoDB')
 })
 .catch(error => {
   console.log(error)
+});
+
+mongoose.connection.on("disconnected", () => {
+  console.log("MongoDB disconnected!");
 });
 
 // Only start the server if Mongo connects
@@ -44,8 +47,7 @@ const StartServer = () => {
   });
   // Routes
   router.use('/api/seed', seedRouter)
-  // router.use('/api/authors', authorRoutes)
-  // router.use('/api/books', bookRoutes);
+  router.use('/api/flights', flightRoutes)
   // Check API is working properly
   router.get('/api/check', (req, res, next) => res.status(200).json({ message: 'API working' }));
   // Error handling

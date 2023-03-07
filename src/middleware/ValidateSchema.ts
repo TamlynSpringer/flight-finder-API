@@ -17,11 +17,11 @@ export const ValidateSchema = (schema: ObjectSchema) => {
 export const Schemas = {
   flight: {
     create: Joi.object<IFlight>({
-      route_id: Joi.string().required(),
+      routeCode: Joi.string().required(),
       departureDestination: Joi.string().required(),
       arrivalDestination: Joi.string().required(),
       flights: [{
-        flight_id: Joi.string().required(),
+        flightCode: Joi.string().required(),
         departureAt: Joi.string().required(),
         arrivalAt: Joi.string().required(),
         availableSeats: Joi.number().required(),
@@ -33,11 +33,11 @@ export const Schemas = {
       }]
     }),
     update: Joi.object<IFlight>({
-      route_id: Joi.string().required(),
+      routeCode: Joi.string().required(),
       departureDestination: Joi.string().required(),
       arrivalDestination: Joi.string().required(),
       flights: {
-        flight_id: Joi.string().required(),
+        flightCode: Joi.string().required(),
         departureAt: Joi.string().required(),
         arrivalAt: Joi.string().required(),
         availableSeats: Joi.number().required(),
