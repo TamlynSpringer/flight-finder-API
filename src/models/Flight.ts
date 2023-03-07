@@ -21,11 +21,11 @@ export interface IFlightModel extends IFlight, Document {}
 
 const FlightSchema: Schema = new mongoose.Schema(
   {
-    routeCode: { type: String, required: true },
+    routeCode: { type: String, required: true, unique: true },
     departureDestination: { type: String, required: true },
     arrivalDestination: { type: String, required: true },
     flights: [{
-      flightCode: { type: String, required: true },
+      flightCode: { type: String, required: true, unique: true },
       departureAt: { type: String, required: true },
       arrivalAt: { type: String, required: true },
       availableSeats: { type: Number, required: true },

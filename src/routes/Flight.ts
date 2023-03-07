@@ -4,11 +4,15 @@ import { Schemas, ValidateSchema } from '../middleware/ValidateSchema';
 
 const router = express.Router();
 
-router.post('/create', ValidateSchema(Schemas.flight.create), controller.createFlight);
-router.get('/route/:flightId', controller.readRoute);
-// router.get('/flight/:flightId', controller.readFlight);
-router.get('/', controller.readAll);
-router.patch('/update/:flightId', ValidateSchema(Schemas.flight.update), controller.updateFlight);
-router.delete('/delete/:flightId', controller.deleteFlight);
+router.get('/', controller.getAll);
+router.get('/:flightId', controller.getRouteById);
+router.get('/route/:routeCode', controller.getByRouteCode)
+
+// router.post('/create', ValidateSchema(Schemas.flight.create), controller.createFlight);
+// router.get('/route/:id', controller.readRoute);
+// router.get('/route/:flightId/flight/:flightId', controller.readFlight);
+// router.get('/', controller.readAll);
+// router.patch('/update/:flightId', ValidateSchema(Schemas.flight.update), controller.updateFlight);
+// router.delete('/delete/:flightId', controller.deleteFlight);
 
 export = router;
