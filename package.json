@@ -1,5 +1,5 @@
 {
-  "name": "rest-api-typescript-express-mongo",
+  "name": "flight-finder-api",
   "version": "1.0.0",
   "description": "",
   "main": "src/server.ts",

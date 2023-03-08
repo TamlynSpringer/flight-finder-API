@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
 import mongoose from 'mongoose';
 import expressAsyncHandler from 'express-async-handler';
-import Flight, { IFlight } from '../models/Flight';
+import Flight from '../models/Flight';
 
 
 const getAll = async (req: Request, res: Response) => {
@@ -41,7 +41,28 @@ const getByLocation = async (req: Request, res: Response) => {
   res.status(200).send(flights.map(flight => flight));
 }
 
-export default { getAll, getRouteById, getByRouteCode, getByLocation };
+const getByTime = async (req: Request, res: Response) => {
+  const departure = req.body.departureDestination
+  const arrival = req.body.arrivalDestination
+  const depart = req.body.departureAt
+  const date = depart.split('T');
+  console.log(depart)
+  const arrive = req.body.arrivalAt
+  console.log('req body', req.body)
+  const flightLocation = await Flight.find({
+    departureDestination: departure,
+    arrivalDestination: arrival,
+  });
+  const flightDetails = flightLocation.map(flight => flight.flights)
+  console.log('flight location:', flightDetails)
+  const flightTimes = flightDetails.map(flight => console.log(flight.departureAt))
+  if (!flightTimes) {
+    res.status(404).send({ message: `Flights from destination ${departure} and ${arrival} at times ${depart} not found` })
+  }
+  res.status(200).send(flightTimes);
+}
+
+export default { getAll, getRouteById, getByRouteCode, getByLocation, getByTime };
 
 // const createFlight = (req: Request, res: Response, next: NextFunction) => {
 //   const { name } = req.body;

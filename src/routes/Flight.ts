@@ -8,6 +8,7 @@ router.get('/', controller.getAll);
 router.get('/:flightId', controller.getRouteById);
 router.get('/route/:routeCode', controller.getByRouteCode)
 router.get('/route/:departure/:arrival', controller.getByLocation)
+router.get('/route/:departure/:arrival/:depart', controller.getByTime)
 
 
 
