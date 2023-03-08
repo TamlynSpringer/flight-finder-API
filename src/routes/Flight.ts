@@ -7,6 +7,9 @@ const router = express.Router();
 router.get('/', controller.getAll);
 router.get('/:flightId', controller.getRouteById);
 router.get('/route/:routeCode', controller.getByRouteCode)
+router.get('/route/:departure/:arrival', controller.getByLocation)
+
+
 
 // router.post('/create', ValidateSchema(Schemas.flight.create), controller.createFlight);
 // router.get('/route/:id', controller.readRoute);
