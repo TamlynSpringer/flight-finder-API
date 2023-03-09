@@ -1,21 +1,20 @@
 import { NextFunction, Request, Response } from 'express';
 import { flightData } from '../data/dataV2'
 
-
-const getAll = async (req: Request, res: Response, next: NextFunction) => {
+const getAll = (req: Request, res: Response, next: NextFunction) => {
   res.send(flightData);
 };
 
-const getRouteById = async (req: Request, res: Response, next: NextFunction) => {
+const getRouteById = (req: Request, res: Response, next: NextFunction) => {
   const routeId = req.params.routeId;
-  const flights = await flightData.find(flight => flight.route_id === routeId);
+  const flights = flightData.find(flight => flight.route_id === routeId);
   if (!flights) {
     res.status(404).json({ message: `Flight route with id ${req.params.routeId} not found` })
   } 
   res.status(200).json({ flights });
 }
 
-const getByLocation = async (req: Request, res: Response, next: NextFunction) => {
+const getByLocation = (req: Request, res: Response, next: NextFunction) => {
   const departure = req.body.departureDestination
   const arrival = req.body.arrivalDestination
   const flights = flightData.find(
@@ -26,6 +25,29 @@ const getByLocation = async (req: Request, res: Response, next: NextFunction) =>
     res.status(404).send({ message: `Flights from ${departure} to ${arrival} not found` })
   }
   res.status(200).send(flights);
+}
+
+const getLayover = (req: Request, res: Response, next: NextFunction) => {
+  const departure = req.body.departureDestination
+  const arrival = req.body.arrivalDestination
+  const depart = req.body.departureAt
+  const departFlight = flightData.find(flight => flight.departureDestination === departure)
+  const firstFlight = departFlight?.itineraries.filter(
+    flight => flight.departureAt === depart
+    )
+  const stopOver = departFlight?.arrivalDestination
+  const stopArrive = firstFlight?.map(flight => flight.arrivalAt).toString()
+  console.log(stopArrive)
+  const arriveFlight = flightData.find(flight => flight.departureDestination === stopOver && flight.arrivalDestination === arrival)
+  if (stopArrive) {
+    const secondFlight = arriveFlight?.itineraries.filter(
+      flight => flight?.departureAt > stopArrive
+    )
+    // console.log(secondFlight?.find(flight => flight[0]))
+    return secondFlight
+  }
+  
+  // console.log(secondFlight)
 }
 
 const getByTime = (req: Request, res: Response, next: NextFunction) => {
@@ -70,4 +92,4 @@ const bookFlight = (req: Request, res: Response, next: NextFunction) => {
   res.status(404).send({ message: `No seats available for flight ${flightId}` })
 }
 
-export default { getAll, getRouteById, getByLocation, getByTime, getFlightById, bookFlight };
+export default { getAll, getRouteById, getByLocation, getLayover, getByTime, getFlightById, bookFlight };
