@@ -47,21 +47,25 @@ const getByTime = async (req: Request, res: Response, next: NextFunction) => {
   const arrival = req.body.arrivalDestination;
   const depart = req.body.departureAt
   console.log('req body', req.body)
-  const flights = await Flight.find({
+  const flightLocation = await Flight.find({
     departureDestination: departure,
     arrivalDestination: arrival,
-    'flights.departureAt': depart
+    // 'flights.departureAt': depart
   });
+  const flightTime = flightLocation.map(flight => flight.flights)
+  // flightLocation?.flights.filter(
+  //   flight => flight.departureAt === depart
+  // )
   // const flightDetails = flights.map(function (flight) {
   //   return flight.flights
   // }).filter(function (flight) {
   //   return flight.departureAt === depart
   // })
-  console.log(flights.map(flight => flight.flights))
-  if (!flights) {
+  // console.log(flights.map(flight => flight.flights))
+  if (!flightTime) {
     res.status(404).send({ message: `Flights from destination ${departure} and ${arrival} not found` })
   }
-  res.status(200).send();
+  res.status(200).send(flightTime);
 }
 
 // const getByTime = async (req: Request, res: Response, next: NextFunction) => {
