@@ -1,68 +1,49 @@
 import { NextFunction, Request, Response } from 'express';
-import mongoose from 'mongoose';
-import expressAsyncHandler from 'express-async-handler';
-import Flight from '../models/Flight';
+import { flightData } from '../data/dataV2'
 
 
-const getAll = async (req: Request, res: Response) => {
-  const flights = await Flight.find();
-  res.send(flights);
+const getAll = async (req: Request, res: Response, next: NextFunction) => {
+  res.send(flightData);
 };
 
-const getRouteById = async (req: Request, res: Response) => {
-  const flightId = req.params.flightId;
-  const flights = await Flight.findById(flightId);
+const getRouteById = async (req: Request, res: Response, next: NextFunction) => {
+  const routeId = req.params.routeId;
+  const flights = await flightData.find(flight => flight.route_id === routeId);
   if (!flights) {
-    res.status(404).json({ message: `Flight route with id ${req.params.flightId} not found` })
+    res.status(404).json({ message: `Flight route with id ${req.params.routeId} not found` })
   } 
   res.status(200).json({ flights });
 }
 
-const getByRouteCode = async (req: Request, res: Response) => {
-  const routeCode = req.params.routeCode
-  const flights = await Flight.findOne({routeCode: req.params.routeCode});
-  if (!flights) {
-    res.status(404).send({ message: `Flight route with code ${routeCode} not found` })
-  }
-  res.status(200).send(flights);
-}
-
-const getByLocation = async (req: Request, res: Response) => {
+const getByLocation = (req: Request, res: Response, next: NextFunction) => {
   const departure = req.body.departureDestination
   const arrival = req.body.arrivalDestination
   console.log('req body', req.body)
-  const flights = await Flight.find({
-    departureDestination: departure,
-    arrivalDestination: arrival
+  console.log(flightData)
+  const flights = flightData.find(flight => {
+    flight.departureDestination === departure && flight.arrivalDestination === arrival
   });
   if (!flights) {
     res.status(404).send({ message: `Flights from destination ${departure} and ${arrival} not found` })
   }
-  res.status(200).send(flights.map(flight => flight));
+  res.status(200).send(flights);
 }
 
-const getByTime = async (req: Request, res: Response) => {
+const getByTime = async (req: Request, res: Response, next: NextFunction) => {
   const departure = req.body.departureDestination
   const arrival = req.body.arrivalDestination
   const depart = req.body.departureAt
-  const date = depart.split('T');
-  console.log(depart)
-  const arrive = req.body.arrivalAt
-  console.log('req body', req.body)
-  const flightLocation = await Flight.find({
-    departureDestination: departure,
-    arrivalDestination: arrival,
-  });
-  const flightDetails = flightLocation.map(flight => flight.flights)
-  console.log('flight location:', flightDetails)
-  const flightTimes = flightDetails.map(flight => console.log(flight.departureAt))
-  if (!flightTimes) {
+  // const flightLocation = flightData.find(flight => {
+  //   flight.departureDestination === departure && flight.arrivalDestination === arrival
+  // });
+  const flightTime = flightData?.map(flight => flight?.itineraries.filter(flightTime => flightTime.departureAt === depart))
+  if (!flightTime) {
     res.status(404).send({ message: `Flights from destination ${departure} and ${arrival} at times ${depart} not found` })
   }
-  res.status(200).send(flightTimes);
+  res.status(200).send(flightTime);
 }
 
-export default { getAll, getRouteById, getByRouteCode, getByLocation, getByTime };
+export default { getAll, getRouteById, getByLocation, getByTime };
 
 // const createFlight = (req: Request, res: Response, next: NextFunction) => {
 //   const { name } = req.body;

@@ -4,17 +4,17 @@ export interface IFlight {
   routeCode: string;
   departureDestination: string;
   arrivalDestination: string;
-  flights: {
-    flightCode: string;
-    departureAt: string;
-    arrivalAt: string;
-    availableSeats: number;
+  flights: [
+    flightCode: string,
+    departureAt: string,
+    arrivalAt: string,
+    availableSeats: number,
     prices: {
       currency: string;
       adult: number;
       child: number;
     }
-  }
+  ]
 }
 
 export interface IFlightModel extends IFlight, Document {}

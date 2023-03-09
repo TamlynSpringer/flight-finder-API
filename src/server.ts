@@ -3,7 +3,8 @@ import http from 'http';
 import mongoose from 'mongoose';
 import { config } from './config/config';
 import flightRoutes from './routes/Flight';
- import seedRouter from './routes/Seed';
+import flightRoutesV2 from './routes/FlightV2';
+import seedRouter from './routes/Seed';
 
 const router = express();
 
@@ -48,6 +49,7 @@ const StartServer = () => {
   // Routes
   router.use('/api/seed', seedRouter)
   router.use('/api/flights', flightRoutes)
+  router.use('/api/v2/flights', flightRoutesV2)
   // Check API is working properly
   router.get('/api/check', (req, res, next) => res.status(200).json({ message: 'API working' }));
   // Error handling

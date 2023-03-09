@@ -6,7 +6,7 @@
   "scripts": {
     "build": "rm -rf build/ && npx tsc",
     "start": "node build/server.ts",
-    "dev": "nodemon src/server.ts"
+    "dev": "nodemon ts-node src/server.ts"
   },
   "keywords": [],
   "author": "",

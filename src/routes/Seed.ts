@@ -1,7 +1,7 @@
 import express from 'express';
 // import Route from '../models/Route';
 import Flight from '../models/Flight';
-import data from '../data'
+import data from '../data/data'
 
 
 const seedRouter = express.Router();
