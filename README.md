@@ -49,6 +49,8 @@ API is divided into version 1 which uses MongoDB and mongoose and version 2 that
 
 **/api/v2/flights/route/:departure/:arrival/date/:date** - get all flights that matching the date specified in the front-end as url-encoded form data 
 
+**/api/v2/flights/route/:departure/:arrival/price/:price** - get all flights that matching the upper price specified in the front-end as url-encoded form data (only for adult ticket prices)
+
 **/api/v2/flights/flight/:flightId** - get flight by ID
 
 **_PUT:_**

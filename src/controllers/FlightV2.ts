@@ -47,10 +47,9 @@ const getByDateTime = (req: Request, res: Response) => {
 };
 
 const getByDate = (req: Request, res: Response) => {
-  const departure = req.body.departureDestination
-  const arrival = req.body.arrivalDestination
-  const date = req.body.departureDate
-  console.log(date)
+  const departure = req.body.departureDestination;
+  const arrival = req.body.arrivalDestination;
+  const date = req.body.departureDate;
   const flightLocation = flightData.find(
     flight => flight.departureDestination === departure && flight.arrivalDestination === arrival
   );
@@ -63,21 +62,42 @@ const getByDate = (req: Request, res: Response) => {
   res.status(200).send(flightTime);
 };
 
+const getByPrice = (req: Request, res: Response) => {
+  const departure = req.body.departureDestination;
+  const arrival = req.body.arrivalDestination;
+  const price = req.body.price;
+  const flightLocation = flightData.find(
+    flight => flight.departureDestination === departure && flight.arrivalDestination === arrival
+  );
+  const flightPrice = flightLocation?.itineraries.filter(
+    flight => flight.prices.adult <= Number(price)
+  );
+  if (!flightPrice) {
+    res.status(404).send({ message: `Flights from destination ${departure} and ${arrival} with price ${price} SEK not found` })
+  }
+  res.status(200).send(flightPrice);
+}
 
 const getConnectingFlight = (req: Request, res: Response) => {
-  const departure = req.body.departureDestination
-  const arrival = req.body.arrivalDestination
-  const date = req.body.departureDate
-  const depart = req.body.departureAt
-  const departFlight = flightData.find(flight => flight.departureDestination === departure)
-  const firstFlight = departFlight?.itineraries.filter(flight => flight.departureAt === depart)
-  const stopOver = departFlight?.arrivalDestination
+  const departure = req.body.departureDestination;
+  const arrival = req.body.arrivalDestination;
+  const date = req.body.departureDate;
+  const depart = req.body.departureAt;
+  const departFlight = flightData.find(flight => flight.departureDestination === departure);
+  const firstFlight = departFlight?.itineraries.filter(flight => flight.departureAt === depart);
+  const stopOver = departFlight?.arrivalDestination;
   const stopArriveDT = firstFlight?.map(flight => flight.arrivalAt).toString();
-  const stopArrive = stopArriveDT?.split('T')[1].split(':')[0]
-  const arriveFlightOptions = flightData.find(flight => flight.departureDestination === stopOver && flight.arrivalDestination === arrival);
-  const secondFlights = arriveFlightOptions?.itineraries.filter(f => f.departureDate === date && f.departureTime > (stopArrive ? stopArrive : '00'))
-  const secondFlight = secondFlights ? secondFlights[0] : {}
-  const layover = secondFlights && firstFlight ? parseInt(secondFlights[0].departureTime) - parseInt(firstFlight[0].arrivalTime) : 'Unknown layover time'
+  const stopArrive = stopArriveDT?.split('T')[1].split(':')[0];
+  const arriveFlightOptions = flightData.find(
+    flight => flight.departureDestination === stopOver && flight.arrivalDestination === arrival
+  );
+  const secondFlights = arriveFlightOptions?.itineraries.filter(
+    f => f.departureDate === date && f.departureTime > (stopArrive ? stopArrive : '00')
+  );
+  const secondFlight = secondFlights ? secondFlights[0] : {};
+  const layover = secondFlights && firstFlight 
+  ? parseInt(secondFlights[0].departureTime) - parseInt(firstFlight[0].arrivalTime) 
+  : 'Unknown layover time';
   const connectedFlight = {
     "Departing flight": firstFlight,
     "Layover": `${layover} hours`,
@@ -114,4 +134,4 @@ const bookFlightSeat = (req: Request, res: Response) => {
   res.status(404).send({ message: `No seats available for flight ${flightId}` })
 }
 
-export default { getAll, getRouteById, getByLocation, getConnectingFlight, getByDateTime, getByDate, getFlightById, bookFlightSeat };
+export default { getAll, getRouteById, getByLocation, getConnectingFlight, getByDateTime, getByDate, getByPrice, getFlightById, bookFlightSeat };
