@@ -6,9 +6,9 @@ const router = express.Router();
 router.get('/', controller.getAll);
 router.get('/:routeId', controller.getRouteById);
 router.get('/route/:departure/:arrival', controller.getByLocation)
-router.get('/route/layover/:departure/:arrival/:depart', controller.getConnectingFlight)
 router.get('/route/:departure/:arrival/datetime/:depart', controller.getByDateTime)
 router.get('/route/:departure/:arrival/date/:date', controller.getByDate)
+router.get('/route/layover/:departure/:arrival/:depart', controller.getConnectingFlight)
 router.get('/flight/:flightId', controller.getFlightById);
 router.put('/book/:flightId', controller.bookFlightSeat)
 

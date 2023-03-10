@@ -27,7 +27,6 @@ const getByRouteCode = async (req: Request, res: Response) => {
 const getByLocation = async (req: Request, res: Response) => {
   const departure = req.body.departureDestination
   const arrival = req.body.arrivalDestination
-  console.log('req body', req.body)
   const flights = await Flight.find({
     departureDestination: departure,
     arrivalDestination: arrival
