@@ -2,7 +2,7 @@
   <img src='./src/public/logo.svg' alt='Flight Finder API' />
 </section>
 
-<h2 align="center">API to find and book flights between Stoclholm, Oslo and Amsterdam</h2>
+<h2 align="center">API to find and book flights between Stockholm, Oslo and Amsterdam</h2>
 
 ## Tech stack
 
@@ -10,6 +10,7 @@
 - Express
 - MongoDB
 - Mongoose
+- Joi
 - Typescript
 
 ***
